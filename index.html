@@ -4,781 +4,306 @@
   <meta charset="UTF-8" />
   <title>Dr. Muhammad Saleem Khan - Academic Profile</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta
-    name="description"
-    content="Academic profile of Dr. Muhammad Saleem Khan, Assistant Professor of Computer Science at COMSATS University Islamabad, Attock Campus."
-  />
+  <meta name="description"
+        content="Academic profile of Dr. Muhammad Saleem Khan, Assistant Professor of Computer Science at COMSATS University Islamabad, Attock Campus." />
+
   <style>
     :root {
-      --bg: #f6f7fb;
-      --bg-alt: #ffffff;
-      --accent: #1a73e8;
-      --accent-soft: #e8f0fe;
-      --text-main: #202124;
-      --text-muted: #5f6368;
-      --border-soft: #dadce0;
-      --radius-lg: 12px;
-      --radius-pill: 999px;
-      --shadow-soft: 0 2px 6px rgba(0, 0, 0, 0.04);
+      --primary: #2B6CB0;
+      --primary-light: #E1ECF9;
+      --bg: #F7FAFC;
+      --text-main: #1a202c;
+      --text-muted: #4a5568;
+      --card-bg: #ffffff;
+      --border: #E2E8F0;
+      --radius: 12px;
+      --radius-lg: 18px;
+      --shadow: 0 3px 10px rgba(0,0,0,0.05);
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        sans-serif;
+      font-family: system-ui, sans-serif;
       background: var(--bg);
       color: var(--text-main);
       line-height: 1.6;
     }
 
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .page {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 24px 16px 40px;
-    }
-
-    /* Header / nav */
     header {
-      border-bottom: 1px solid var(--border-soft);
-      background: #ffffffcc;
-      backdrop-filter: blur(4px);
-      position: sticky;
-      top: 0;
-      z-index: 10;
+      background: var(--card-bg);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+      position: sticky; top: 0; z-index: 10;
+      padding: 12px 0;
     }
 
     .nav-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 10px 16px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
+      max-width: 1100px; margin: auto;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 0 20px;
     }
 
     .brand {
-      font-weight: 600;
-      font-size: 15px;
-      color: var(--text-main);
+      font-size: 18px; font-weight: 700; color: var(--primary);
     }
 
-    .brand-sub {
-      font-size: 11px;
-      color: var(--text-muted);
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      font-size: 13px;
-    }
-
+    nav ul { list-style: none; display: flex; gap: 10px; }
     nav a {
-      padding: 5px 11px;
-      border-radius: var(--radius-pill);
-      border: 1px solid transparent;
+      padding: 6px 12px; border-radius: var(--radius);
       color: var(--text-muted);
     }
-
     nav a:hover {
-      border-color: var(--border-soft);
-      background: #f1f3f4;
-      text-decoration: none;
+      background: var(--primary-light);
+      color: var(--primary);
     }
 
-    /* Layout */
+    .page { max-width: 1100px; margin: auto; padding: 30px 20px; }
+
     main {
-      margin-top: 24px;
       display: grid;
-      grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.1fr);
-      gap: 20px;
-      align-items: flex-start;
+      grid-template-columns: 2fr 1fr;
+      gap: 24px;
+    }
+    @media(max-width:900px) {
+      main { grid-template-columns: 1fr; }
     }
 
-    @media (max-width: 900px) {
-      main {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    /* Cards / sections */
     .card {
-      background: var(--bg-alt);
+      background: var(--card-bg);
+      border: 1px solid var(--border);
       border-radius: var(--radius-lg);
-      border: 1px solid var(--border-soft);
-      box-shadow: var(--shadow-soft);
-      padding: 18px 20px 16px;
+      padding: 20px 25px;
+      box-shadow: var(--shadow);
     }
 
     .hero-card {
-      margin-bottom: 18px;
+      border-left: 6px solid var(--primary);
+      background: linear-gradient(to right, #ffffff, #f0f6ff);
     }
 
-    .section {
-      margin-top: 18px;
-    }
-
-    .section h2 {
-      font-size: 18px;
-      margin-bottom: 8px;
-    }
-
-    .section-subtitle {
-      font-size: 12px;
-      color: var(--text-muted);
-      margin-bottom: 12px;
-    }
-
-    .two-col {
-      display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-      gap: 16px;
-    }
-
-    @media (max-width: 700px) {
-      .two-col {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    /* Hero */
     .hero-top {
-      display: flex;
-      gap: 16px;
-      align-items: center;
-      flex-wrap: wrap;
-      margin-bottom: 10px;
+      display: flex; gap: 16px; align-items: center;
     }
 
     .avatar {
-      width: 80px;
-      height: 80px;
+      width: 90px; height: 90px;
       border-radius: 16px;
-      border: 1px solid var(--border-soft);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 30px;
-      font-weight: 600;
-      color: var(--accent);
-      background: #fafafa;
+      background: var(--primary);
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; font-weight: 700; font-size: 34px;
+      box-shadow: 0 4px 12px rgba(43,108,176,0.3);
     }
 
-    .hero-text h1 {
-      font-size: 22px;
-      margin-bottom: 4px;
-    }
+    h1 { font-size: 26px; }
+    h2 { font-size: 20px; margin-bottom: 8px; color: var(--primary); }
+    .subtitle { font-size: 14px; color: var(--text-muted); margin-bottom: 6px; }
 
-    .hero-title {
-      font-size: 14px;
-      color: var(--text-muted);
-      margin-bottom: 4px;
-    }
-
-    .hero-affiliation {
-      font-size: 13px;
-      color: var(--text-muted);
-    }
-
-    .chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 8px;
-    }
-
+    .chips { display: flex; gap: 6px; flex-wrap: wrap; margin: 10px 0; }
     .chip {
-      font-size: 11px;
-      padding: 3px 9px;
-      border-radius: var(--radius-pill);
-      background: #f1f3f4;
-      color: #3c4043;
-    }
-
-    .cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 10px;
+      background: var(--primary-light);
+      padding: 4px 10px;
+      border-radius: var(--radius);
+      font-size: 12px; color: var(--primary);
+      border: 1px solid #c6d8f5;
     }
 
     .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 7px 14px;
-      border-radius: var(--radius-pill);
-      font-size: 13px;
-      border: 1px solid var(--border-soft);
-      background: #ffffff;
-      color: var(--text-main);
-      cursor: pointer;
-      text-decoration: none;
-    }
-
-    .btn-primary {
-      background: var(--accent);
-      color: #ffffff;
-      border-color: var(--accent);
-    }
-
-    .btn-primary:hover {
-      background: #1557b0;
-      border-color: #1557b0;
-      text-decoration: none;
-    }
-
-    .btn-ghost:hover {
-      background: #f1f3f4;
-      text-decoration: none;
-    }
-
-    .hero-body {
+      padding: 8px 16px;
+      border-radius: var(--radius);
+      border: 1px solid var(--primary);
+      background: var(--primary);
+      color: white;
       font-size: 14px;
-      color: var(--text-muted);
+      text-decoration: none;
+      transition: 0.2s;
     }
+    .btn:hover { background: #1f4e7c; }
 
-    .hero-body p + p {
-      margin-top: 6px;
+    .btn-outline {
+      background: white; color: var(--primary);
     }
+    .btn-outline:hover { background: var(--primary-light); }
 
-    /* Sidebar */
-    .side-title {
-      font-size: 15px;
-      margin-bottom: 8px;
-    }
-
-    .side-item {
-      font-size: 13px;
-      margin-bottom: 8px;
-      color: var(--text-muted);
-    }
-
-    .side-label {
-      font-weight: 500;
-      color: var(--text-main);
-    }
-
-    /* Lists */
-    .list {
-      list-style: none;
-      font-size: 14px;
-    }
-
-    .list li + li {
-      margin-top: 8px;
-    }
-
-    .item-title {
-      font-weight: 500;
-    }
-
-    .item-meta {
-      font-size: 13px;
-      color: var(--text-muted);
-    }
-
-    .subheading {
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--text-muted);
-      margin-bottom: 4px;
-      margin-top: 2px;
-    }
-
-    /* Pills / tags */
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-bottom: 6px;
-      margin-top: 2px;
-    }
+    .list { list-style: none; margin-top: 10px; }
+    .list li { margin-bottom: 10px; }
 
     .pill {
-      font-size: 11px;
-      padding: 3px 9px;
-      border-radius: var(--radius-pill);
-      background: var(--accent-soft);
-      color: #174ea6;
-      border: 1px solid #d2e3fc;
-    }
-
-    /* Publications */
-    .pub-category {
-      font-size: 13px;
-      font-weight: 600;
-      margin-top: 6px;
-      margin-bottom: 4px;
-    }
-
-    .pub-list {
-      list-style: decimal;
-      margin-left: 18px;
-      font-size: 13px;
-      color: var(--text-main);
-    }
-
-    .pub-list li + li {
-      margin-top: 6px;
-    }
-
-    .if-badge {
-      display: inline-flex;
-      align-items: center;
-      padding: 1px 7px;
-      font-size: 11px;
-      border-radius: var(--radius-pill);
-      background: #fff8e1;
-      border: 1px solid #ffe082;
-      color: #795548;
-      margin-left: 4px;
-    }
-
-    /* Footer */
-    footer {
-      margin-top: 24px;
+      background: var(--primary-light);
+      padding: 4px 10px;
+      border-radius: var(--radius);
       font-size: 12px;
-      color: var(--text-muted);
-      text-align: center;
-      padding-top: 8px;
+      color: var(--primary);
+      border: 1px solid #ceddf7;
+    }
+
+    footer {
+      margin-top: 30px; text-align: center;
+      font-size: 13px; color: var(--text-muted);
     }
   </style>
 </head>
+
 <body>
-  <header>
-    <div class="nav-inner">
-      <div>
-        <div class="brand">Dr. Muhammad Saleem Khan</div>
-        <div class="brand-sub">Assistant Professor of Computer Science</div>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#research-interests">Research</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#publications">Publications</a></li>
-          <li><a href="#current-research">Current Work</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#honors">Honors</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
 
-  <div class="page">
-    <main>
-      <!-- Main content -->
-      <div>
-        <!-- Hero -->
-        <section id="about" class="card hero-card">
-          <div class="hero-top">
-            <div class="avatar">MS</div>
-            <div class="hero-text">
-              <h1>Dr. Muhammad Saleem Khan</h1>
-              <div class="hero-title">Assistant Professor of Computer Science</div>
-              <div class="hero-affiliation">
-                Department of Computer Science, COMSATS University Islamabad, Attock Campus, Pakistan
-              </div>
-              <div class="chips">
-                <span class="chip">PhD Computer Science</span>
-                <span class="chip">Machine Learning &amp; NLP</span>
-                <span class="chip">Trust &amp; Security in MANETs</span>
-                <span class="chip">IoT &amp; Wireless Networks</span>
-              </div>
-              <div class="cta-row">
-                <a class="btn btn-primary" href="#contact">📬 Contact</a>
-                <!-- Make sure Cv_saleem.pdf exists in the repo root or update path -->
-                <a class="btn btn-ghost" href="Cv_saleem.pdf" target="_blank">
-                  📄 Download CV (PDF)
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="hero-body">
-            <p>
-              I am an Assistant Professor of Computer Science at COMSATS University Islamabad (Attock Campus),
-              with a PhD in Computer Science and a research background in trust-based security frameworks,
-              wireless and mobile ad hoc networks, machine learning, and natural language processing.
-            </p>
-            <p>
-              My work bridges foundational research in network security and trust management with emerging areas
-              such as deep learning for text, Urdu language technologies, and AI for environmental and earth
-              systems applications.
-            </p>
-          </div>
-        </section>
-
-        <!-- Research Interests -->
-        <section id="research-interests" class="card section">
-          <h2>Research Interests</h2>
-          <div class="section-sub">Core themes and domains of interest</div>
-          <div class="pill-row">
-            <span class="pill">Advanced Natural Language Processing</span>
-            <span class="pill">Large Language Models</span>
-            <span class="pill">Transfer Learning</span>
-            <span class="pill">Deep Learning for Text</span>
-            <span class="pill">Internet of Things (IoT)</span>
-            <span class="pill">Network Trust, Security &amp; Privacy</span>
-            <span class="pill">AI for Earth Systems &amp; Climate</span>
-            <span class="pill">Remote Sensing &amp; Environmental Monitoring</span>
-          </div>
-          <p>
-            I am particularly interested in leveraging modern deep learning methods to build robust, trustworthy
-            systems—from secure routing in mobile ad hoc networks to continuous sign language translation and
-            mental health analysis in Urdu.
-          </p>
-        </section>
-
-        <!-- Academic Background & Experience -->
-        <section id="experience" class="card section">
-          <h2>Academic Background &amp; Experience</h2>
-          <div class="section-sub">Degrees, academic roles, and research positions</div>
-
-          <div class="two-col">
-            <div>
-              <div class="subheading">Degrees</div>
-              <ul class="list">
-                <li>
-                  <div class="item-title">PhD in Computer Science</div>
-                  <div class="item-meta">
-                    COMSATS Institute of Information Technology, Islamabad, Pakistan<br />
-                    <strong>Thesis:</strong> Trust Based Security Framework for Secure Routing in Mobile Ad hoc Networks
-                  </div>
-                </li>
-                <li>
-                  <div class="item-title">MS in Computer Science (2008–2010)</div>
-                  <div class="item-meta">
-                    Mohammad Ali Jinnah University (MAJU), Islamabad, Pakistan
-                  </div>
-                </li>
-                <li>
-                  <div class="item-title">Master in Information Technology (2004–2006)</div>
-                  <div class="item-meta">
-                    Kohat University of Science and Technology (KUST), Kohat, Pakistan
-                  </div>
-                </li>
-                <li>
-                  <div class="item-title">B.Sc (2001–2003)</div>
-                  <div class="item-meta">
-                    Gomal University, D.I. Khan, Pakistan
-                  </div>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <div class="subheading">Academic &amp; Research Positions</div>
-              <ul class="list">
-                <li>
-                  <div class="item-title">Assistant Professor (Jan 2018 – Present)</div>
-                  <div class="item-meta">
-                    Department of Computer Science, COMSATS University Islamabad, Attock Campus.
-                  </div>
-                </li>
-                <li>
-                  <div class="item-title">Lecturer (Sep 2016 – Dec 2017)</div>
-                  <div class="item-meta">
-                    Department of Computer Science, COMSATS University Islamabad, Attock Campus.
-                  </div>
-                </li>
-                <li>
-                  <div class="item-title">Research Associate (Mar 2013 – Dec 2014)</div>
-                  <div class="item-meta">
-                    Project: <em>Design and Development of Hybrid IPv4 &amp; IPv6 Network for QoS Enabled
-                    Video Streaming Multicast Application</em>,
-                    Capital University of Science and Technology, Islamabad, Pakistan.
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <!-- Publications -->
-        <section id="publications" class="card section">
-          <h2>Publications</h2>
-          <div class="section-sub">Selected peer-reviewed journal and conference papers</div>
-          <p>
-            My research contributions span trust management in MANETs, packet loss analysis, wireless sensor
-            networks, text analytics, and related domains, with an overall journal impact factor of approximately 11.
-          </p>
-
-          <div class="pub-category">Journal Articles</div>
-          <ol class="pub-list">
-            <li>
-              M. S. Khan et al., “MATF: A Multi-attribute Trust Framework for MANETs,”
-              <em>EURASIP Journal on Wireless Communications and Networking</em>, 2016
-              <span class="if-badge">IF 1.529</span>
-            </li>
-            <li>
-              M. S. Khan et al., “Mitigation of Packet Loss using Data Rate Adaptation Scheme in MANETs,”
-              <em>Mobile Networks and Applications</em>, 2016
-              <span class="if-badge">IF 3.259</span>
-            </li>
-            <li>
-              M. S. Khan et al., “Isolating Misbehaving Nodes in MANETs with an Adaptive Trust Threshold Strategy,”
-              <em>Mobile Networks and Applications</em>, 2016
-              <span class="if-badge">IF 3.259</span>
-            </li>
-            <li>
-              M. S. Khan et al., “Fine-grained Analysis of Packet Loss in MANETs,”
-              <em>IEEE Access</em>, 2017
-              <span class="if-badge">IF 3.24</span>
-            </li>
-            <li>
-              I. U. Haq et al., “E2-MACH: Energy Efficient Multi-Attribute Based Clustering Scheme for
-              Energy Harvesting Wireless Sensor Networks,”
-              <em>International Journal of Distributed Sensor Networks</em>, 2020
-              <span class="if-badge">IF 1.51</span>
-            </li>
-            <li>
-              M. S. Khan et al., “Identification of review helpfulness using novel textual and language-context
-              features,” <em>Journal of Mathematics</em>, 2022
-              <span class="if-badge">IF 2.592</span>
-            </li>
-          </ol>
-
-          <div class="pub-category">Conference Proceedings</div>
-          <ol class="pub-list">
-            <li>
-              M. S. Khan et al., “Data Rate Adaptation Strategy to Avoid Packet Loss in MANETs,”
-              <em>1st EAI International Conference on Future Intelligent Vehicular Technologies</em>, Porto, Portugal, 2016.
-            </li>
-            <li>
-              M. S. Khan et al., “Adaptive Reputation Weight Assignments Scheme for MANETs,”
-              <em>TrustCom-16</em>, Tianjin, China, 2016.
-            </li>
-            <li>
-              I. Ahmed et al., “Aggregated Signatures for Chaining: A Secure Provenance Scheme,”
-              <em>TrustCom-16</em>, Tianjin, China, 2016.
-            </li>
-            <li>
-              K. Hameed et al., “A Zero Watermarking Scheme for Data Integrity in Wireless Sensor Networks,”
-              <em>NBiS-2016</em>, Czech Republic.
-            </li>
-            <li>
-              M. S. Khan et al., “A Comprehensive Analysis of Packet Loss in MANETs,”
-              <em>ICCCN16</em>, Hawaii, USA, 2016.
-            </li>
-            <li>
-              M. S. Khan et al., “Adaptive Trust Update Frequency in MANETs,”
-              <em>ICPADS 2015</em>, Melbourne, Australia.
-            </li>
-            <li>
-              M. S. Khan et al., “Adaptive Trust Threshold Strategy for Misbehaving Node Detection and Isolation,”
-              <em>Trustcom15</em>, Helsinki, Finland, 2015.
-            </li>
-            <li>
-              M. S. Khan et al., “A Comparative Performance Analysis of MANET Routing Protocols under Security Attacks,”
-              <em>ICMWT2015</em>, Bangkok, Thailand.
-            </li>
-          </ol>
-        </section>
-
-        <!-- Current Research -->
-        <section id="current-research" class="card section">
-          <h2>Current Research Directions</h2>
-          <div class="section-sub">Ongoing work and supervision areas</div>
-          <ul class="list">
-            <li>
-              <div class="item-title">
-                Hybrid Deep Learning for Continuous Pakistan Sign Language Translation
-              </div>
-              <div class="item-meta">
-                Developing robust models for continuous PSL translation, combining temporal modeling, vision-based
-                features, and sequence-to-sequence architectures for Urdu text and speech.
-              </div>
-            </li>
-            <li>
-              <div class="item-title">
-                Mental Health Classification using Urdu Text
-              </div>
-              <div class="item-meta">
-                Applying NLP and deep learning techniques to detect and classify mental health signals in Urdu
-                language content, with emphasis on cultural context and interpretability.
-              </div>
-            </li>
-            <li>
-              <div class="item-title">
-                Packet Drop Attack Analysis using Machine Learning in IoTs
-              </div>
-              <div class="item-meta">
-                Extending packet-loss and attack analysis from MANETs to IoT environments using ML-based
-                detection and characterization methods.
-              </div>
-            </li>
-            <li>
-              <div class="item-title">
-                IoT-based Forest Monitoring via Acoustic Properties
-              </div>
-              <div class="item-meta">
-                Designing IoT systems that use acoustic signatures of tree-cutting to detect and monitor illegal
-                logging in forests across Pakistan.
-              </div>
-            </li>
-          </ul>
-        </section>
-
-        <!-- Projects -->
-        <section id="projects" class="card section">
-          <h2>Selected Projects</h2>
-          <div class="section-sub">Research, prototypes, and applied systems</div>
-          <ul class="list">
-            <li>
-              <div class="item-title">
-                Automated Analysis of Car Deal Conversations using BERT-based QA Model
-              </div>
-              <div class="item-meta">
-                Built a system using BERT and question-answering techniques to analyze car deal conversations and
-                extract key insights from unstructured dialogue.
-              </div>
-            </li>
-            <li>
-              <div class="item-title">
-                Adaptive Routing Architecture for VANET (HEC-funded)
-              </div>
-              <div class="item-meta">
-                Designed and evaluated an adaptive routing architecture for vehicular ad hoc networks, focusing
-                on reliability and performance under dynamic conditions.
-              </div>
-            </li>
-            <li>
-              <div class="item-title">
-                Trust-based Security Mechanism in OLSR (NS-2)
-              </div>
-              <div class="item-meta">
-                Implemented trust-based extensions to the OLSR routing protocol in NS-2, enhancing misbehaving
-                node detection and secure routing.
-              </div>
-            </li>
-            <li>
-              <div class="item-title">
-                Multi-level Work Queue Algorithm (NS-2 &amp; NS-3)
-              </div>
-              <div class="item-meta">
-                Implemented and analyzed a multi-level work queue algorithm in NS-2 and NS-3, studying performance
-                across diverse traffic and scheduling scenarios.
-              </div>
-            </li>
-            <li>
-              <div class="item-title">
-                Multicast Communication over Hybrid IPv4–IPv6 Networks
-              </div>
-              <div class="item-meta">
-                Researched multicast communication over hybrid IPv4/IPv6 networks for QoS-enabled video streaming
-                applications.
-              </div>
-            </li>
-          </ul>
-        </section>
-
-        <!-- Honors -->
-        <section id="honors" class="card section">
-          <h2>Honors &amp; Fellowships</h2>
-          <div class="section-sub">Recognitions and international exposure</div>
-          <ul class="list">
-            <li>
-              HEC-funded MS leading to PhD scholarship (Pakistan).
-            </li>
-            <li>
-              SANOG XXIII fellowship, Thimphu, Bhutan (Jan 13–21, 2014).
-            </li>
-            <li>
-              IRSIP fellowship (HEC, Pakistan) and six-month visiting researcher position at CERIAS,
-              Purdue University, USA.
-            </li>
-            <li>
-              HEC travel grants for ANT-2014 (Belgium), Trustcom-15 (Finland), ICCCN and other venues.
-            </li>
-            <li>
-              CERIAS travel grant for ICPADS-15, Melbourne, Australia.
-            </li>
-            <li>
-              APNIC42 Youth Fellowship, Colombo, Sri Lanka (Sept 28 – Oct 5, 2016).
-            </li>
-          </ul>
-        </section>
-      </div>
-
-      <!-- Sidebar -->
-      <aside>
-        <section class="card" id="contact">
-          <div class="side-title">Contact</div>
-          <div class="side-item">
-            <div class="side-label">Address</div>
-            House No. 2790, Street 83,<br />
-            F Block, Multi Garden B-17,<br />
-            Islamabad, Pakistan.
-          </div>
-          <div class="side-item">
-            <div class="side-label">Phone</div>
-            (+92) 345-1447541
-          </div>
-          <div class="side-item">
-            <div class="side-label">Email</div>
-            <a href="mailto:skhan.ciit@gmail.com">skhan.ciit@gmail.com</a>
-          </div>
-          <div class="side-item">
-            <div class="side-label">GitHub</div>
-            <!-- Replace your-username with your actual GitHub username -->
-            <a href="https://github.com/saleemmarwat" target="_blank">
-              github.com/your-username
-            </a>
-          </div>
-        </section>
-
-        <section class="card section">
-          <div class="side-title">At a Glance</div>
-          <div class="side-item">
-            <div class="side-label">Current Role</div>
-            Assistant Professor, Computer Science
-          </div>
-          <div class="side-item">
-            <div class="side-label">Institution</div>
-            COMSATS University Islamabad,<br />
-            Attock Campus
-          </div>
-          <div class="side-item">
-            <div class="side-label">Research Domains</div>
-            MANETs, Trust &amp; Security,<br />
-            IoT, NLP, Deep Learning,<br />
-            AI for Earth Systems
-          </div>
-          <div class="side-item">
-            <div class="side-label">Journal Impact Factor</div>
-            ≈ 11 (cumulative)
-          </div>
-        </section>
-      </aside>
-    </main>
-
-    <footer>
-      &copy; <span id="year"></span> Dr. Muhammad Saleem Khan — Academic Profile
-    </footer>
+<header>
+  <div class="nav-inner">
+    <div class="brand">Dr. Muhammad Saleem Khan</div>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#honors">Honors</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </div>
+</header>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+<div class="page">
+  <main>
+
+    <!-- LEFT SIDE -->
+    <div>
+
+      <!-- HERO CARD -->
+      <section id="about" class="card hero-card">
+        <div class="hero-top">
+          <div class="avatar">MS</div>
+
+          <div>
+            <h1>Dr. Muhammad Saleem Khan</h1>
+            <div class="subtitle">Assistant Professor · Computer Science<br> COMSATS University Islamabad</div>
+
+            <div class="chips">
+              <span class="chip">Machine Learning</span>
+              <span class="chip">NLP</span>
+              <span class="chip">MANETs Security</span>
+              <span class="chip">IoT Systems</span>
+            </div>
+
+            <a class="btn" href="#contact">Contact</a>
+            <a class="btn btn-outline" href="Cv_saleem.pdf" target="_blank">Download CV</a>
+          </div>
+        </div>
+
+        <p class="subtitle" style="margin-top:12px;">
+          Researcher in trust-based security, mobile networks, NLP for Urdu language, and deep learning-based intelligent systems.
+        </p>
+      </section>
+
+      <!-- RESEARCH -->
+      <section id="research" class="card">
+        <h2>Research Interests</h2>
+        <div class="subtitle">My active research domains</div>
+
+        <div class="chips">
+          <span class="pill">Deep Learning</span>
+          <span class="pill">NLP</span>
+          <span class="pill">IoT Security</span>
+          <span class="pill">LLMs</span>
+          <span class="pill">Trust Management</span>
+          <span class="pill">Wireless Networks</span>
+          <span class="pill">Earth Systems AI</span>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section id="experience" class="card">
+        <h2>Academic Experience</h2>
+        <ul class="list">
+          <li><strong>Assistant Professor (2018–Present)</strong> — COMSATS University Islamabad</li>
+          <li><strong>Lecturer (2016–2017)</strong> — COMSATS University</li>
+          <li><strong>Research Associate</strong> — Hybrid IPv4/IPv6 Network Project</li>
+        </ul>
+
+        <h3 style="margin-top:15px;color:var(--primary)">Degrees</h3>
+        <ul class="list">
+          <li><strong>PhD (Computer Science)</strong> — CIIT Islamabad</li>
+          <li><strong>MS CS</strong> — MAJU Islamabad</li>
+          <li><strong>MSc IT</strong> — KUST</li>
+          <li><strong>BSc</strong> — Gomal University</li>
+        </ul>
+      </section>
+
+      <!-- PUBLICATIONS -->
+      <section id="publications" class="card">
+        <h2>Publications</h2>
+        <div class="subtitle">Selected peer-reviewed research</div>
+        <ul class="list">
+          <li>MATF: Multi-Attribute Trust Framework for MANETs — *EURASIP JWCN*</li>
+          <li>Data Rate Adaptation Strategy — *Mobile Networks and Applications*</li>
+          <li>Fine-Grained Packet Loss Analysis — *IEEE Access*</li>
+          <li>Energy Efficient Clustering — *IJSN*</li>
+          <li>Review Helpfulness Analysis — *Journal of Mathematics*</li>
+        </ul>
+
+        <a href="#projects" style="color:var(--primary); font-weight:600;">View all publications →</a>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" class="card">
+        <h2>Projects</h2>
+        <ul class="list">
+          <li>BERT-based Car Deal Conversation Analyzer</li>
+          <li>Adaptive Routing Architecture for VANET (HEC)</li>
+          <li>Trust-Based OLSR Security (NS-2)</li>
+          <li>Multi-Level Work Queue Algorithm (NS-3)</li>
+          <li>Hybrid IPv4–IPv6 Multicast Research</li>
+        </ul>
+      </section>
+
+      <!-- HONORS -->
+      <section id="honors" class="card">
+        <h2>Honors & Fellowships</h2>
+        <ul class="list">
+          <li>IRSIP Fellowship — Purdue University, USA</li>
+          <li>HEC MS→PhD Scholarship</li>
+          <li>SANOG XXIII Fellowship — Bhutan</li>
+          <li>APNIC42 Youth Fellow — Sri Lanka</li>
+          <li>Travel Grants to Belgium, Finland, Australia, USA</li>
+        </ul>
+      </section>
+
+    </div>
+
+    <!-- RIGHT SIDEBAR -->
+    <aside>
+      <section id="contact" class="card">
+        <h2>Contact</h2>
+        <p><strong>Email:</strong> skhan.ciit@gmail.com</p>
+        <p><strong>Phone:</strong> +92 345 1447541</p>
+        <p><strong>GitHub:</strong> github.com/saleemmarwat</p>
+        <p><strong>Address:</strong><br>
+           House 2790, Street 83,<br>
+           B-17 Multi Gardens, Islamabad
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Quick Info</h2>
+        <p><strong>Role:</strong> Assistant Professor</p>
+        <p><strong>Dept:</strong> Computer Science</p>
+        <p><strong>Impact Factor:</strong> ≈ 11</p>
+        <p><strong>Domains:</strong> ML, NLP, IoT, Security</p>
+      </section>
+    </aside>
+
+  </main>
+
+  <footer>
+    © <span id="year"></span> Dr. Muhammad Saleem Khan — Academic Profile
+  </footer>
+</div>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
